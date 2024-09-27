@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Roihu';
+    src: url('roihu-bold/subset-Roihu-Medium.woff2') format('woff2'),
+        url('roihu-bold/subset-Roihu-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roihu-MediumIt';
+    src: url('roihu-bold/subset-Roihu-MediumIt.woff2') format('woff2'),
+        url('roihu-bold/subset-Roihu-MediumIt.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
