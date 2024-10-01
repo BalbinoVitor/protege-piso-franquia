@@ -105,7 +105,7 @@ body a{
 
 /* Header Wrapper */
 .header-wrapper {
-  background-image: url("./images/bannner_principal.jpeg");
+  background-image: url("./images/banner_principal.jpg");
   height: 85vh; /* Ocupa a altura total da tela */
   background-size: cover;
   background-position: center;
