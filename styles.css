@@ -769,6 +769,14 @@ margin: 20px;
   background-color: #00612F;
 }
 
+@media screen and (max-width: 1450px) {
+  .imagem-quem-somos{
+    width: 60%;
+    height: 70%;
+    border-radius: 10px;
+  }
+  }
+
 /*-----------------------RESPONSIVIDADE ---------------------*/
 @media screen and (max-width: 1150px) {
 
