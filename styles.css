@@ -17,7 +17,6 @@ paleta de cores do escuro para o mais claro
 
 }
 
-
 @font-face {
   font-family: 'Roihu-black';
   src: url('./fonts/font-roihu-black/subset-Roihu-Black.woff2') format('woff2'),
@@ -645,7 +644,8 @@ margin: 20px;
 
 .imagem-quem-somos{
   height: 80%;
-  width: 50%;
+  width: 60%;
+  border-radius: 10px;
 }
 
 .container-quem-somos h3 {
@@ -768,7 +768,14 @@ margin: 20px;
   color: wheat;
   background-color: #00612F;
 }
-
+/*-----------------------RESPONSIVIDADE ---------------------*/
+@media screen and (max-width: 1450px) {
+.imagem-quem-somos{
+  width: 60%;
+  height: 70%;
+  border-radius: 10px;
+}
+}
 /*-----------------------RESPONSIVIDADE ---------------------*/
 @media screen and (max-width: 1150px) {
 
@@ -982,6 +989,7 @@ margin: 20px;
   .imagem-quem-somos{
     width: 70%;
     height: 80%;
+    border-radius: 10px;
   }
 
   .conteudo-quem-somos {
@@ -1219,6 +1227,7 @@ margin: 20px;
   .imagem-quem-somos{
     width: 70%;
     height: 70%;
+    border-radius: 10px;
   }
 
   .header-rodape {
@@ -1563,6 +1572,7 @@ margin: 20px;
   .imagem-quem-somos{
     height: 50%;
     width: 80%;
+    border-radius: 10px;
   }
 
   .header-rodape {
