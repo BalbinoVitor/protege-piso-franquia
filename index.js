@@ -39,7 +39,7 @@ function toggleMenu() {
     menu.classList.toggle('active');
 }
 
-const apiUrl = 'https://app.ketzim.com/webservice/get-instagram-info/ProtegePisoFlorianópolis/?Token=Ld7gRCo9JtIRw0Ub3sC3JxuCgIMvSAzJEMLSutCPh9XosGzzqpdlhsqhUYXHHRyHKPZ6MHcwfl8Dl7ohzsKv7jpihquxHvFmEkFJ';
+const apiUrl = 'https://app.ketzim.com/webservice/get-instagram-info/ProtegePisoBarueri/?Token=Ld7gRCo9JtIRw0Ub3sC3JxuCgIMvSAzJEMLSutCPh9XosGzzqpdlhsqhUYXHHRyHKPZ6MHcwfl8Dl7ohzsKv7jpihquxHvFmEkFJ';
 
 function displayUserProfile(profile) {
     document.getElementById('profile-picture').src = profile.profile_picture_url;
@@ -134,7 +134,7 @@ function waitForJivoChat() {
 waitForJivoChat();
 
 const iframeContainer = document.querySelector('.container-iframe');
-const iframeUrl = 'https://app.ketzim.com/webservice/mapa/balneariocamboriu/';
+const iframeUrl = 'https://app.ketzim.com/webservice/mapa/barueri/';
 
 
 fetch(iframeUrl)
@@ -151,16 +151,3 @@ fetch(iframeUrl)
     iframeContainer.innerHTML = '<p>O mapa está temporariamente indisponível. Por favor, tente novamente mais tarde.</p>';
     console.error('Erro ao carregar o mapa:', error);
   });
-
-/*
-document.getElementById('openFranchiseChatBtn').addEventListener('click', function() {
-    document.getElementById('formContainer').style.display = 'none';
-    document.getElementById('embedChatContainer').style.display = 'flex';
-});
-
-document.getElementById('closeChatBtn').addEventListener('click', function() {
-    document.getElementById('embedChatContainer').style.display = 'none';
-    document.getElementById('formContainer').style.display = 'block';
-});*/
-
-
