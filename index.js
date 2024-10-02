@@ -132,15 +132,22 @@ function waitForJivoChat() {
 }
 
 waitForJivoChat();
-/*
-document.getElementById('openFranchiseChatBtn').addEventListener('click', function() {
-    document.getElementById('formContainer').style.display = 'none';
-    document.getElementById('embedChatContainer').style.display = 'flex';
-});
 
-document.getElementById('closeChatBtn').addEventListener('click', function() {
-    document.getElementById('embedChatContainer').style.display = 'none';
-    document.getElementById('formContainer').style.display = 'block';
-});*/
+const iframeContainer = document.querySelector('.container-iframe');
+const iframeUrl = 'https://app.ketzim.com/webservice/mapa/saojosedoscampos/';
 
 
+fetch(iframeUrl)
+  .then(response => {
+    if (response.ok) {
+      iframeContainer.innerHTML = `
+        <iframe src="${iframeUrl}" class="iframe-full" title="Mapa das obras realizadas na cidade da franquia"></iframe>
+      `;
+    } else {
+      iframeContainer.innerHTML = '<p style="color: red" >O mapa com as obras está temporariamente indisponível. Por favor, tente novamente mais tarde.</p>';
+    }
+  })
+  .catch(error => {
+    iframeContainer.innerHTML = '<p>O mapa está temporariamente indisponível. Por favor, tente novamente mais tarde.</p>';
+    console.error('Erro ao carregar o mapa:', error);
+  });
