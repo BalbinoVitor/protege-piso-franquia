@@ -39,7 +39,7 @@ function toggleMenu() {
     menu.classList.toggle('active');
 }
 
-const apiUrl = 'https://app.ketzim.com/webservice/get-instagram-info/ProtegePisoVarginha/?Token=Ld7gRCo9JtIRw0Ub3sC3JxuCgIMvSAzJEMLSutCPh9XosGzzqpdlhsqhUYXHHRyHKPZ6MHcwfl8Dl7ohzsKv7jpihquxHvFmEkFJ';
+const apiUrl = 'https://app.ketzim.com/webservice/get-instagram-info/ProtegePisoCampinas/?Token=Ld7gRCo9JtIRw0Ub3sC3JxuCgIMvSAzJEMLSutCPh9XosGzzqpdlhsqhUYXHHRyHKPZ6MHcwfl8Dl7ohzsKv7jpihquxHvFmEkFJ';
 
 function displayUserProfile(profile) {
     document.getElementById('profile-picture').src = profile.profile_picture_url;
@@ -75,7 +75,7 @@ function displayPosts(posts) {
         postCard.classList.add('post-card-custom');
 
         postCard.innerHTML = `
-            <a href="${post.permalink}" target="_blank"> <!-- Link clicável -->
+            <a href="${post.permalink}" target="_blank">
                 <img src="${post.media_url}" alt="${post.caption}">
             </a>
         `;
@@ -134,7 +134,7 @@ function waitForJivoChat() {
 waitForJivoChat();
 
 const iframeContainer = document.querySelector('.container-iframe');
-const iframeUrl = 'https://app.ketzim.com/webservice/mapa/varginha/';
+const iframeUrl = 'https://app.ketzim.com/webservice/mapa/campinas/';
 
 
 fetch(iframeUrl)
