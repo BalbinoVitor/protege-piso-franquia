@@ -134,7 +134,7 @@ function waitForJivoChat() {
 waitForJivoChat();
 
 const iframeContainer = document.querySelector('.container-iframe');
-const iframeUrl = 'https://app.ketzim.com/webservice/mapa/campinas/';
+const iframeUrl = 'https://app.ketzim.com/webservice/mapa/campinassul/';
 
 
 fetch(iframeUrl)
