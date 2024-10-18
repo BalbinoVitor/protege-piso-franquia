@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Roihu';
+    src: url('font-roihu-black/subset-Roihu-Black.woff2') format('woff2'),
+        url('font-roihu-black/subset-Roihu-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+

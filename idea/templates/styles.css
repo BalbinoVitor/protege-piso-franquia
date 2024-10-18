@@ -1,0 +1,1660 @@
+/*
+
+paleta de cores do escuro para o mais claro
+#429B41 verde claro
+#00612F verde escuro
+#262626 preto 
+#FFFFFF branco
+*/
+
+@font-face {
+  font-family: 'Roihu-bold';
+  src: url('./fonts/roihu-bold/subset-Roihu-Bold.woff2') format('woff2'),
+      url('./fonts/roihu-bold/subset-Roihu-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+
+}
+
+
+@font-face {
+  font-family: 'Roihu-black';
+  src: url('./fonts/font-roihu-black/subset-Roihu-Black.woff2') format('woff2'),
+      url('./fonts/font-roihu-black/subset-Roihu-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+@font-face {
+  font-family: 'Roihu-regular';
+  src: url('./fonts/roihu-regular/subset-Roihu-Regular.woff2') format('woff2'),
+      url('./fonts/roihu-regular/subset-Roihu-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roihu-medium';
+  src: url('./fonts/roihu-bold/subset-Roihu-Medium.woff2') format('woff2'),
+      url('./fonts/roihu-bold/subset-Roihu-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #ffffff;
+  font-family: 'Roihu-regular';
+}
+
+body h1 {
+  font-size: 2.8rem;
+  font-family: 'Roihu-bold';
+}
+
+body h2 {
+  font-size: 2.6rem;
+  font-family: 'Roihu-bold';
+}
+
+body h3 {
+  font-size: 2.4rem;
+  font-family: 'Roihu-bold';
+  color: #262626;
+  line-height: 1.2;
+}
+
+body h4 {
+  font-size: 2rem;
+  line-height: 1.2;
+  font-family: 'Roihu-bold';
+}
+
+body h5 {
+  font-size: 2rem;
+  font-family: 'Roihu-bold';
+}
+
+body h6 {
+  font-size: 1.8rem;
+  font-family: 'Roihu-bold';
+}
+
+body p {
+  font-size: 1.4rem;
+  font-family: 'Roihu-regular';
+
+}
+
+body a{
+  font-family: 'Roihu-bold';
+  font-size: 1.8rem;
+}
+
+/* Header Wrapper */
+.header-wrapper {
+  background-image: url("./images/Parcial_Santa_Monica_Uberlandia_julho_2015_2.jpeg");
+  height: 85vh; /* Ocupa a altura total da tela */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  align-items: center;
+  position: relative;
+}
+
+.navbar-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: 'Roihu-bold';
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  
+}
+
+.nav-item {
+  margin-left: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1;
+  text-decoration: none;
+  padding: 7px 13px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.nav-link:hover {
+  background-color: #fff;
+  color: #17a541;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+/* Menu Mobile */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.logo {
+  display: flex;
+  /*align-items: center;*/
+  text-decoration: none;
+}
+
+.logo img {
+  width: 60px;
+  height: auto;
+}
+
+.logo h3 {
+  display: flex;
+  line-height: 1.2;
+  font-size: 1.5rem;
+  margin-left: 15px;
+  color: #f5f5f5;
+  align-items: center;
+}
+
+.nav-link:hover {
+  background-color: #fff;
+  color: #17a541;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.overlay {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(23, 165, 65, 0.8);
+}
+
+.content-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.text-content {
+  color: #fff;
+  max-width: 600px;
+  margin-right: 20px;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+.text-content h1 {
+  margin-bottom: 20px;
+}
+
+.text-content p {
+  line-height: 1.3;
+}
+
+.form-container {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  max-width: 370px;
+  width: 100%;
+  position: relative; /* Garante que o formulário fique corretamente posicionado */
+  z-index: 2; /* Garante que o formulário fique acima do overlay */
+  box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+}
+
+.form-container ul {
+  display: flex;
+  flex-wrap: wrap; /* Permite quebrar os itens em várias linhas */
+  padding: 0;
+  margin: 0;
+  list-style-type: none; /* Remove os marcadores da lista */
+  gap: 5px; /* Espaçamento entre os itens */
+}
+
+.form-container ul li {
+  width: calc(
+    50% - 10px
+  ); /* Cada item ocupará 50% da largura, com um espaçamento de 10px */
+}
+
+.form-container h2 {
+  color: #000000;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 800;
+}
+
+.bot-trigger--btn {
+  font-family: 'Roihu-regular';
+  line-height: 1;
+  width: 100%;
+  padding: 15px;
+  background-color: #215fd3; /* Cor do botão */
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex; 
+  align-items: center;  
+  justify-content: center; 
+  gap: 8px;
+}
+
+.bot-trigger--btn:hover {
+  background-color: #447be2; /* Cor mais escura para o hover */
+}
+
+.chatbot-icon {
+  width: 20px; /* Ajuste o tamanho do ícone conforme necessário */
+  height: auto; /* Mantém a proporção do ícone */
+}
+
+.chatbot-embed-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  max-width: 370px;
+  width: 100%;
+  z-index: 3; /* Coloca o chatbot acima do form-container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-chat-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  z-index: 4; /* Garantir que fique acima de tudo */
+}
+
+.close-chat-button:hover {
+  background-color: #d32f2f;
+}
+
+.container-slider {
+  margin-top: 3%;
+}
+
+.texto-centralizado-margin-top-10 {
+  margin-top: 6%;
+  text-align: center;
+}
+
+/* Container do carrossel */
+.glider-contain {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.glider-contain > h3 {
+  margin-top: 8%;
+  margin-bottom: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Estilo dos cards */
+.glider .card {
+  background-color: white; /* Equivalente ao bg-white */
+  border-radius: 0.5rem; /* Equivalente ao rounded-lg */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1); /* Equivalente ao shadow-lg */
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Efeito hover nos cards */
+.glider .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(71, 71, 71, 0.356);
+}
+
+/* Estilo das imagens */
+.card img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Centralizando as dots */
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Estilo das dots */
+.dots button {
+  background-color: #333;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  margin: 5px;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  border: none;
+}
+.container-sobre-produto {
+  background-color: #ffffff;
+  background-image: url("images/fundo_ondulado.svg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2%; /* Adiciona padding horizontal */
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.container-sobre-produto h3 {
+  margin-bottom: 2%;
+}
+
+/* Define a grid com 3 colunas para telas maiores */
+.sobre-produto-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Três colunas de largura igual */
+  gap: 60px; /* Espaçamento entre as colunas */
+  width: 100%;
+  max-width: 1200px; /* Limita a largura máxima */
+  color: white;
+}
+
+.produto-grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: rgba(11, 75, 21, 0.637);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: center; /* Centraliza o conteúdo dentro do card */
+}
+
+.produto-grid-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 8px rgba(141, 139, 139, 0.562);
+}
+
+.imagem-piso {
+  width: 60%; /* Ajusta o tamanho da imagem */
+  margin-bottom: 15px; /* Espaçamento abaixo da imagem */
+}
+
+.produto-grid-item h3 {
+  margin-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+.descricao-produto {
+  margin-top: 10px;
+  line-height: 1.5;
+  color: white;
+}
+
+.container-video-guia {
+  height: 900px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.descricao-video {
+  margin-top: 1%;
+}
+
+.video-js {
+  margin-top: 3%;
+  width: 80%;
+  height: 75%;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 0px 11px 0px #00c4178e;
+}
+
+.container-mapa {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 90dvh;
+}
+
+.titulo-mapa {
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo-mapa p{
+  margin-top: 3%;
+}
+
+.container-iframe{
+  display: block;
+  margin: 0; 
+  border: none;
+  width: 100%; 
+  height: 100%;
+}
+
+.iframe-full {
+  margin: 0; 
+  padding: 0; 
+  width: 100%;
+  height: 100%; 
+  overflow-x: hidden; 
+  border: none;
+}
+
+.container-instagram {
+  width: 100%;
+  height: 1200px;
+  background-color: white;
+}
+
+.container-unidades {
+  width: 100%;
+  height: 900px;
+  background-color: white;
+}
+
+.container-redes-sociais {
+  height: auto;
+  background-color: rgb(255, 255, 255);
+}
+
+.glider-contain-custom {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden; /* Evita que o conteúdo saia dos limites */
+  padding: 0 40px; /* Adiciona um padding nas laterais para as setas */
+}
+
+.glider-prev-custom,
+.glider-next-custom {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background-color: rgba(0, 0, 0, 0.281); /* Fundo semitransparente */
+  color: rgb(27, 25, 25);
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 2;
+  width: 40px; /* Ajusta o tamanho do botão */
+  height: 40px; /* Ajusta o tamanho do botão */
+}
+
+.glider-prev-custom {
+  left: 10px; /* Alinhamento à esquerda, dentro do container */
+}
+
+.glider-next-custom {
+  right: 10px; /* Alinhamento à direita, dentro do container */
+}
+
+.glider-custom {
+  overflow: hidden; /* Evita que o conteúdo saia dos limites */
+}
+
+.post-card-custom {
+  margin: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.post-card-custom img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.post-card-custom img:hover {
+  transform: scale(1.05); /* Efeito de hover */
+}
+
+.imagem-perfil-instagram {
+  border-radius: 200px 200px 200px 200px;
+  -moz-border-radius: 200px 200px 200px 200px;
+  -webkit-border-radius: 200px 200px 200px 200px;
+}
+
+.profile-container-custom {
+  text-align: center;
+}
+
+.profile-info-custom h1,
+.profile-info-custom p {
+  margin: 10px 0;
+  color: rgb(0, 0, 0);
+}
+
+.botao-seguir {
+  font-size: 17px;
+  border-radius: 23px;
+  padding-left: 21px;
+  padding-right: 21px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #ffffff;
+  background-color: #429B41;
+  outline: none;
+  border: 1px solid #14991a;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.botao-seguir:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.container-quem-somos {
+  min-height: 900px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding-top: 2%;
+  padding-left: 3%;
+  padding-right: 3%;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  align-items: center; /* Alinha verticalmente os itens ao centro */
+}
+
+.imagem-quem-somos{
+  height: 80%;
+  width: 50%;
+}
+
+.container-quem-somos h3 {
+  margin-bottom: 5%;
+}
+
+
+
+/* --------------Rodapé-------------- */
+
+.display-flex-column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.display-flex-row {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.whatsapp-icon {
+  margin-top: 10%;
+  width: 50px; /* Define um tamanho fixo para as imagens */
+  height: 50px; /* Define a altura para manter a proporção */
+  object-fit: contain; /* Garante que a imagem se ajuste ao tamanho sem distorcer */
+  margin-right: 4%;
+}
+
+.whatsapp-icon-nav {
+  width: 30px; /* Define um tamanho fixo para as imagens */
+  height: 30px; /* Define a altura para manter a proporção */
+  margin-right: 4%;
+}
+
+.container-rodape {
+  background-color: #00612F;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+
+.imagem-logo-rodape {
+  margin: 0;
+}
+
+.rodape-informacoes {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.rodape-informacoes a{
+  text-decoration: none;
+}
+
+.rodape-informacoes-icone-whatsapp{
+  width: 25px; 
+  height: 25px; 
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.rodape-informacoes-icone-instagram{
+  width: 28px; 
+  height: 28px; 
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.rodape-informacoes-contato{
+  display: flex;
+}
+
+.rodape-redes-sociais {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Adiciona alinhamento vertical */
+  color: white;
+}
+
+.rodape-icones {
+  gap: 20px; /* Espaço entre os ícones */
+  display: flex;
+}
+
+.rodape-redes-sociais > a {
+  display: flex; /* Garante que o link envolva toda a área da imagem */
+  text-decoration: none; /* Remove o sublinhado dos links */
+}
+.item-rodape {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.rodape-direitos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: wheat;
+  background-color: #00612F;
+}
+
+/*-----------------------RESPONSIVIDADE ---------------------*/
+@media screen and (max-width: 1150px) {
+
+  body {
+    overflow-x: hidden;
+    background-color: #ffffff;
+    font-family: 'Roihu-regular';
+  }
+  
+  body h1 {
+    font-size: 2.3rem;
+    font-family: 'Roihu-bold';
+  }
+  
+  body h2 {
+    font-size: 2rem;
+    font-family: 'Roihu-bold';
+  }
+  
+  body h3 {
+    font-size: 1.8rem;
+    font-family: 'Roihu-bold';
+    color: #262626;
+    line-height: 1.2;
+  }
+  
+  body h4 {
+    font-size: 1.6rem;
+    font-family: 'Roihu-bold';
+  }
+  
+  body h5 {
+    font-size: 1.5rem;
+    font-family: 'Roihu-bold';
+  }
+  
+  body h6 {
+    font-size: 1.4rem;
+    font-family: 'Roihu-bold';
+  }
+  
+  body p {
+    font-size: 1rem;
+    font-family: 'Roihu-regular';
+  
+  }
+  
+  body a{
+    font-family: 'Roihu-bold';
+    font-size: 1.8rem;
+  }
+
+  .content-container {
+    flex-direction: column;
+  }
+
+  .text-content {
+    text-align: center;
+    margin-right: 0px;
+    margin-bottom: 1%;
+    line-height: 1.5;
+  }
+
+  .text-content > h1 {
+    text-align: center;
+  }
+
+  .text-content > p {
+    text-align: center;
+    margin: 0;
+  }
+
+  .navbar {
+    width: 100%;
+    background-color: #16944b;
+  }
+
+  .navbar.active {
+    background-color: #16944b;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: #16944b;
+    width: 100%;
+    z-index: 1001; /* Certifica que ele fique sobre os outros elementos */
+  }
+
+  .nav-menu.active {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-item {
+    margin-left: 0;
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .form-container {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    max-width: 370px;
+    width: 100%;
+    position: relative; /* Garante que o formulário fique corretamente posicionado */
+    z-index: 2; /* Garante que o formulário fique acima do overlay */
+    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+  }
+
+  .form-container p {
+    margin-bottom: 2%;
+  }
+
+  .container-sobre-produto {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%; /* Adiciona padding horizontal */
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
+
+  .container-sobre-produto h3 {
+    margin-bottom: 2%;
+  }
+
+  /* Define a grid com 3 colunas para telas maiores */
+  .sobre-produto-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Três colunas de largura igual */
+    gap: 20px; /* Espaçamento entre as colunas */
+    width: 100%;
+    max-width: 1200px; /* Limita a largura máxima */
+  }
+/*
+  .produto-grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: rgba(11, 75, 21, 0.637);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    text-align: center; 
+  }
+*/
+  .imagem-piso {
+    width: 60%; /* Ajusta o tamanho da imagem */
+    margin-bottom: 15px; /* Espaçamento abaixo da imagem */
+  }
+
+  .produto-grid-item h3 {
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+  }
+
+  .descricao-produto {
+    margin-top: 10px;
+    line-height: 1.5;
+    color: white;
+  }
+
+  .container-video-guia {
+    height: 600px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+  }
+
+  .container-video-guia h1 {
+    margin-top: 2%;
+  }
+
+  .descricao-video {
+    margin-top: 1%;
+  }
+
+  .video-js {
+    margin-top: 3%;
+    width: 80%;
+    height: 65%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 0px 11px 0px #00c4178e;
+  }
+  
+  .container-quem-somos {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding-top: 2%;
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
+
+  .imagem-quem-somos{
+    width: 70%;
+    height: 80%;
+  }
+
+  .conteudo-quem-somos {
+    display: flex;
+    flex-direction: column;
+    color: #000000;
+  }
+
+  .conteudo-quem-somos > p {
+    display: flex;
+    flex-direction: column;
+    margin: 5% 5% 0 5%;
+  }
+
+  .quem-somos-imagem {
+    border-radius: 33% 67% 41% 59% / 57% 43% 57% 43%;
+    width: 55%;
+    height: auto;
+    margin-top: 3%;
+  }
+
+  .container-rodape {
+    background-color: #00612F;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .rodape-informacoes {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2%;
+    color: white;
+  }
+
+  .rodape-informacoes {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    color: white;
+  }
+
+  .display-flex-row {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .rodape-redes-sociais {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Adiciona alinhamento vertical */
+    color: white;
+  }
+
+  .rodape-icones {
+    gap: 20px; /* Espaço entre os ícones */
+    display: flex;
+  }
+
+  .rodape-redes-sociais > a {
+    display: block; /* Garante que o link envolva toda a área da imagem */
+    text-decoration: none; /* Remove o sublinhado dos links */
+  }
+  .item-rodape {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+    background-color: #ffffff;
+    font-family: 'Roihu-regular';
+  }
+  
+  body h1 {
+    font-size: 2rem;
+    font-family: 'Roihu-bold';
+  }
+  
+  body h2 {
+    font-size: 1.8rem;
+    font-family: 'Roihu-bold';
+  }
+  
+  body h3 {
+    font-size: 1.6rem;
+    font-family: 'Roihu-bold';
+    color: #262626;
+    line-height: 1.2;
+  }
+  
+  body h4 {
+    font-size: 1.4rem;
+    font-family: 'Roihu-bold';
+  }
+  
+  body h5 {
+    font-size: 1.3rem;
+    font-family: 'Roihu-bold';
+  }
+  
+  body h6 {
+    font-size: 1.2rem;
+    font-family: 'Roihu-bold';
+  }
+  
+  body p {
+    font-size: 1rem;
+    font-family: 'Roihu-regular';
+  
+  }
+  
+  body a{
+    font-family: 'Roihu-bold';
+    font-size: 1.6rem;
+  }
+
+  .glider-contain h3 {
+    text-align: center;
+  }
+
+  .text-content {
+    margin-right: 10px; /* Reduz a margem em telas menores */
+    line-height: 1.5;
+  }
+
+  .form-container {
+    padding: 20px; /* Reduz o padding em telas menores */
+  }
+
+  .container-sobre-produto {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%; /* Adiciona padding horizontal */
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
+  .sobre-produto-grid {
+    grid-template-columns: 1fr; /* Em telas menores, os itens ficam em uma única coluna */
+  }
+
+  .produto-grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: rgba(11, 75, 21, 0.637);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18); /* Centraliza o conteúdo dentro do card */
+  }
+  .produto-grid-item {
+    width: 100%; /* Cada item ocupa toda a largura disponível */
+  }
+
+
+  .container-sobre-produto h4 {
+    margin-top: 4%;
+    margin-bottom: 3%;
+    text-align: center;
+  }
+
+  .container-video-guia {
+    height: 700px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+  }
+
+  .container-video-guia h1 {
+    margin-top: 5%;
+  }
+
+  .descricao-video {
+    margin-top: 1%;
+    text-align: center;
+  }
+
+  .video-js {
+    margin-top: 3%;
+    width: 80%;
+    height: 55%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 0px 11px 0px #00c4178e;
+  }
+
+  .container-mapa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 500px;
+  }
+
+  .container-quem-somos {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding-top: 2%;
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
+
+  .container-quem-somos h3 {
+    margin-bottom: 5%;
+  }
+
+  .imagem-quem-somos{
+    width: 70%;
+    height: 70%;
+  }
+
+  .header-rodape {
+    background-color: #148505;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-rodape {
+    background-color: #00612F;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .rodape-informacoes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-top: 2%;
+    color: white;
+  }
+
+  .rodape-paginas {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2%;
+    color: white;
+  }
+
+  .rodape-contatos {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2%;
+    color: white;
+  }
+
+  .rodape-redes-sociais {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    width: 100%;
+    color: white;
+  }
+
+  .rodape-icones {
+    display: flex;
+    gap: 5%; /* Espaço entre os ícones */
+  }
+
+  .rodape-redes-sociais > a {
+    display: block; /* Garante que o link envolva toda a área da imagem */
+    text-decoration: none; /* Remove o sublinhado dos links */
+  }
+
+  .item-rodape {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .whatsapp-icon {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  
+  body {
+    overflow-x: hidden;
+    background-color: #ffffff;
+    font-family: 'Roihu-regular';
+  }
+  
+  body h1 {
+    font-size: 1.8rem;
+    font-family: 'Roihu-bold';
+  }
+  
+  body h2 {
+    font-size: 1.6rem;
+    font-family: 'Roihu-bold';
+  }
+  
+  body h3 {
+    font-size: 1.4rem;
+    font-family: 'Roihu-bold';
+    color: #262626;
+    line-height: 1.2;
+  }
+  
+  body h4 {
+    font-size: 1.5rem;
+    font-family: 'Roihu-bold';
+  }
+  
+  body h5 {
+    font-size: 1.2rem;
+    font-family: 'Roihu-bold';
+  }
+  
+  body h6 {
+    font-size: 1.1rem;
+    font-family: 'Roihu-bold';
+  }
+  
+  body p {
+    font-size: 0.9rem;
+    font-family: 'Roihu-regular';
+  
+  }
+  
+  body a{
+    font-family: 'Roihu-bold';
+    font-size: 1.6rem;
+  }
+
+  .content-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Garante que o conteúdo fique acima do overlay */
+    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura e altura */
+    padding: 3px; /* Adiciona um padding para evitar que o conteúdo encoste nas bordas */
+    overflow: hidden; /* Garante que o conteúdo não vaze */
+  }
+
+  .text-content h1 {
+    margin-bottom: 10px;
+    margin-top: 3px;
+    line-height: 1;
+  }
+
+  .text-content p {
+    line-height: 1.3;
+  }
+
+  .form-container {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    max-width: 370px;
+    width: 100%;
+    position: relative; /* Garante que o formulário fique corretamente posicionado */
+    z-index: 2; /* Garante que o formulário fique acima do overlay */
+    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+  }
+
+  .form-container ul li {
+    width: calc(
+      50% - 10px
+    ); /* Cada item ocupará 50% da largura, com um espaçamento de 10px */
+  }
+
+  .chatbot-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1c8a0e; /* Cor do botão */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    display: flex; /* Usa flexbox para alinhar o texto e o ícone */
+    align-items: center; /* Alinha verticalmente o ícone com o texto */
+    justify-content: center; /* Centraliza o conteúdo no botão */
+    gap: 8px; /* Espaçamento entre o texto e o ícone */
+  }
+
+  .chatbot-button:hover {
+    background-color: #1eb119; /* Cor mais escura para o hover */
+  }
+
+  .chatbot-icon {
+    width: 20px; /* Ajuste o tamanho do ícone conforme necessário */
+    height: auto; /* Mantém a proporção do ícone */
+  }
+
+  .card img {
+    height: 230px;
+  }
+
+  .glider-contain > h3 {
+    text-align: center;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-top: 20%;
+  }
+
+  .card-title {
+    font-weight: bold;
+    color: #333;
+  }
+
+  .glider .card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: solid 1px rgba(0, 0, 0, 0.151);
+  }
+
+  .sobre-produto-infos {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sobre-produto-infos-colunas {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-sobre-produto h4 {
+    margin-top: 4%;
+    margin-bottom: 3%;
+    text-align: center;
+  }
+
+  .container-sobre-produto {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%; /* Adiciona padding horizontal */
+    color: rgb(0, 0, 0);
+    text-align: center;
+  }
+
+  .container-video-guia {
+    height: 400px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8%;
+  }
+
+  .container-video-guia h1 {
+    margin-top: 5%;
+  }
+
+  .descricao-video {
+    margin-top: 1%;
+  }
+
+  .video-js {
+    margin-top: 3%;
+    width: 80%;
+    height: 65%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 0px 11px 0px #00c4178e;
+  }
+
+
+   .container-mapa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 400px;
+  }
+
+  .produto-titulo-imagem {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3%;
+    padding-top: 3%;
+    color: white;
+    text-align: center;
+  }
+
+  .imagem-piso {
+    width: 60%; /* Ajusta o tamanho da imagem conforme necessário */
+    margin: 0 auto; /* Centraliza a imagem */
+  }
+
+  .sobre-produto-infos {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    flex-wrap: wrap; /* Permite que as colunas se ajustem em diferentes tamanhos de tela */
+  }
+
+  .sobre-produto-infos-colunas {
+    width: 100%;
+    margin: 0 1.5%; /* Espaçamento horizontal entre colunas */
+    color: white;
+    text-align: start; /* Centraliza o texto dentro das colunas */
+  }
+
+  .descricao-produto {
+    margin-top: 10px;
+    line-height: 1.4; /* Melhora a legibilidade */
+  }
+
+  .imagem-perfil-instagram {
+    width: 150px;
+  }
+
+  .container-quem-somos {
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding-top: 2%;
+    color: rgb(255, 255, 255);
+    text-align: center;
+  }
+
+  .container-quem-somos h3 {
+    margin-bottom: 8%;
+  }
+
+  .imagem-quem-somos{
+    height: 50%;
+    width: 80%;
+  }
+
+  .header-rodape {
+    background-color: #148505;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-rodape {
+    background-color: #00612F;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .rodape-informacoes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-top: 2%;
+    color: white;
+  }
+
+  .imagem-logo-rodape {
+    width: 150px;
+  }
+
+  .rodape-redes-sociais {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    color: white;
+  }
+
+  .rodape-icones {
+    display: flex;
+    gap: 5%; /* Espaço entre os ícones */
+  }
+
+  .imagem-logo-rodape {
+    margin: 0;
+  }
+
+  .rodape-redes-sociais > a {
+    display: block; /* Garante que o link envolva toda a área da imagem */
+    text-decoration: none; /* Remove o sublinhado dos links */
+  }
+
+  .whatsapp-icon {
+    width: 100%;
+  }
+
+}
+
+/* ---------------TESTE LAYOUT REDE SOCIAL------------------*/
+/* Container do perfil */
+.profile-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-container img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.profile-info h1 {
+  font-size: 24px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.post-card {
+  position: relative;
+}
+
+.post-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.post-card p {
+  text-align: center;
+  margin-top: 5px;
+}
